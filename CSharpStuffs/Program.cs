@@ -17,6 +17,10 @@ namespace CSharpStuffs
                 PolicyName = "LIFE-AXA"
             };
             Console.WriteLine(patient.ToString());
+
+            Doctor doctor = new Doctor("Peter", "Orthopaedics","Apollo");
+
+            Console.WriteLine(doctor);
             Console.ReadLine();
         }
     }

@@ -18,13 +18,10 @@
            //Composition comes into picture now
            //It also means when we construct Patient, we also constructed DoctorInfo
            //Hence, scope of Doctorinfo is dependent on Patient
-           DoctorInfo = new DoctorInfo
-           {
-               DoctorName = doctorName,
-               DoctorSpeciality = doctorSpeciality,
-               WorkingAt = workingAt
-           };
-
+           DoctorInfo = new DoctorInfo(doctorName,doctorSpeciality,workingAt);
+           DoctorInfo.DoctorName = doctorName;
+           DoctorInfo.DoctorSpeciality = doctorSpeciality;
+           DoctorInfo.WorkingAt = workingAt;
        }
 
        //Overrideenn ToString() for convience 
