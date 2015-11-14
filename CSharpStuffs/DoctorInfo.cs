@@ -22,6 +22,11 @@
        public virtual string Information()
        {
            return "DoctorInfo Assigned!";
-       } 
+       }
+
+       public virtual string Information(string informationType)
+       {
+           return informationType + "assigned";
+       }
     }
 }

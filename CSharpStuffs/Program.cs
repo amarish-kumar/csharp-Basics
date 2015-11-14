@@ -23,6 +23,7 @@ namespace CSharpStuffs
             Doctor doctor = new Doctor("Peter", "Orthopaedics","Apollo");
             
             Console.WriteLine(doctor);
+            Console.WriteLine(doctor.Information("Some"));
 
             //Now Call Information Method from different Instances
             DoctorInfo doctorInfo = new DoctorInfo("John","Surgeon","Goverment");
@@ -30,7 +31,7 @@ namespace CSharpStuffs
             //Another scenario
             //IS A relationship comes into picture.
             DoctorInfo doctorInfo2 = new Doctor("Michael", "Cardiologists‎","Private");
-            Console.WriteLine(doctorInfo2.Information());
+            Console.WriteLine(doctorInfo2.Information("New Information Type added"));
 
             Console.WriteLine("Printing Collection!");
             List<DoctorInfo>doctorInfos=new List<DoctorInfo>();
