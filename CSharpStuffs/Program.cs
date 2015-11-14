@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpStuffs
 {
@@ -18,9 +19,34 @@ namespace CSharpStuffs
             };
             Console.WriteLine(patient.ToString());
 
+            //Doctor is having DoctorInfo and inheriting ToString() method
             Doctor doctor = new Doctor("Peter", "Orthopaedics","Apollo");
-
+            
             Console.WriteLine(doctor);
+
+            //Now Call Information Method from different Instances
+            DoctorInfo doctorInfo = new DoctorInfo("John","Surgeon","Goverment");
+
+            //Another scenario
+            //IS A relationship comes into picture.
+            DoctorInfo doctorInfo2 = new Doctor("Michael", "Cardiologists‎","Private");
+            Console.WriteLine(doctorInfo2.Information());
+
+            Console.WriteLine("Printing Collection!");
+            List<DoctorInfo>doctorInfos=new List<DoctorInfo>();
+
+            //Adding in collection
+            doctorInfos.Add(doctorInfo);
+            doctorInfos.Add(doctor);
+            doctorInfos.Add(doctorInfo2);
+
+            //Printing the collection
+            foreach (var infos in doctorInfos)
+            {
+                Console.WriteLine(infos.Information());
+            }
+           // Console.WriteLine(doctorInfo.Information());
+           // Console.WriteLine(doctor.Information());
             Console.ReadLine();
         }
     }

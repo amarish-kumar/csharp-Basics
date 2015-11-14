@@ -2,7 +2,7 @@
 {
    public class DoctorInfo
     {
-       public DoctorInfo(string doctorName, string doctorSpeciality, string workingAt)
+      public DoctorInfo(string doctorName, string doctorSpeciality, string workingAt)
        {
            DoctorName = doctorName;
            DoctorSpeciality = doctorSpeciality;
@@ -18,5 +18,10 @@
            string result = DoctorName + " " + DoctorSpeciality + " " + WorkingAt;
            return result;
        }
+
+       public virtual string Information()
+       {
+           return "DoctorInfo Assigned!";
+       } 
     }
 }
